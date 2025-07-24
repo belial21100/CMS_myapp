@@ -37,18 +37,17 @@ export default function Home() {
   }
 
   return (
-    <div style={{ fontFamily: 'sans-serif', padding: '2rem' }}>
+    <div className="container">
+      <img src="/logo.svg" alt="Stargate Logo" width={120} height={120} />
       <h1>Clone OGame Stargate</h1>
       <p>Tour: {turn}</p>
       <p>Metal: {metal} | Energie: {energy} | Naquadah: {naquadah}</p>
       <p>Flotte: {fleet}</p>
-      <button onClick={buildMine}>Construire mine</button>
-      <button onClick={buildShip} style={{ marginLeft: '0.5rem' }}>
-        Construire vaisseau
-      </button>
-      <button onClick={nextTurn} style={{ marginLeft: '0.5rem' }}>
-        Tour suivant
-      </button>
+      <div className="buttons">
+        <button onClick={buildMine}>Construire mine</button>
+        <button onClick={buildShip}>Construire vaisseau</button>
+        <button onClick={nextTurn}>Tour suivant</button>
+      </div>
     </div>
   );
 }
